@@ -1,0 +1,10 @@
+<div>
+    <button (click)="changeHelloVisibility()">
+        {{text}}
+    </button>
+</div>
+<div>
+    <label *ngIf="isHelloVisible">
+        Hello world!
+    </label>
+</div>
