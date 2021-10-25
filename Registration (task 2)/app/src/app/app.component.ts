@@ -7,4 +7,28 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  isActiveForm=false;
+  user={
+    firstName:'',
+    secondName:'',
+    login:'',
+    email:'',
+    phoneNumber:'',
+    birthDate:'',
+    password:'',
+    repeatPassword:'',
+  }
+
+  openReactiveForm() {
+
+  }
+
+  openForm() {
+    this.isActiveForm = true;
+  }
+
+  signUp() {
+
+  }
 }
