@@ -1,31 +1,32 @@
-import { Component } from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, ValidatorFn, Validators} from '@angular/forms';
+import {Component} from "@angular/core";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'app';
 
   maxDate;
 
-  isActiveForm=false;
-  isActiveReactiveForm=false;
-  isSuccessfulRegistration=false;
+  isActiveForm = false;
+  isActiveReactiveForm = false;
+  isSuccessfulRegistration = false;
 
   repeatPassword='';
-  password='';
+  password = '';
 
-  user={
-    firstName:'',
-    secondName:'',
-    login:'',
-    email:'',
-    phoneNumber:'',
-    birthDate:'',
-    password:'',
+  user = {
+    firstName: '',
+    secondName: '',
+    login: '',
+    email: '',
+    phoneNumber: '',
+    birthDate: '',
+    password: '',
   }
 
   reactiveUser = new FormGroup({
@@ -62,13 +63,13 @@ export class AppComponent {
   });
 
   constructor() {
-    let now=new Date();
+    let now = new Date();
 
-    let maxYear=now.getFullYear()-16;
-    let maxMonth=now.getMonth();
-    let maxDay=now.getDay();
+    let maxYear = now.getFullYear() - 16;
+    let maxMonth = now.getMonth();
+    let maxDay = now.getDate();
 
-    this.maxDate=new Date(maxYear, maxMonth, maxDay).toISOString();
+    this.maxDate = new Date(maxYear, maxMonth, maxDay);
   }
 
   openReactiveForm() {
@@ -100,17 +101,17 @@ export class AppComponent {
     this.isActiveReactiveForm = false;
   }
 
-  private isCorrectDate():ValidatorFn {
-    return (control: AbstractControl): { [key: string]: boolean} | null => {
-      let valid = control.value < this.maxDate;
-      return valid ? null : { date: true };
+  private isCorrectDate(): ValidatorFn {
+    return (control: AbstractControl): { [key: string]: boolean } | null => {
+      let valid = new Date(control.value) < this.maxDate;
+      return valid ? null : {date: true};
     };
   }
 
-  private confirmPasswords():ValidatorFn {
-    return (control: AbstractControl): { [key: string]: boolean} | null => {
+  private confirmPasswords(): ValidatorFn {
+    return (control: AbstractControl): { [key: string]: boolean } | null => {
       let valid = this.password === control.value;
-      return valid ? null : { confirm: true };
+      return valid ? null : {confirm: true};
     };
   }
 }

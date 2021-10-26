@@ -4,9 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
+import { DateBirthValidator } from './dateBirthValidator'
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DateBirthValidator
   ],
     imports: [
         BrowserModule,
