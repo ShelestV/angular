@@ -1,48 +1,112 @@
 <form *ngIf="isActiveForm">
-  <div class="form-group" style="height: 70px; width: 300px; margin: 10px">
+  <div class="form-group">
     <label for="first-name">First name:</label>
     <input id="first-name" name="firstname" class="form-control" type="text" [(ngModel)]="user.firstName" #firstname="ngModel" required>
+    <div [hidden]="firstname.valid || firstname.untouched" class="alert alert-danger">First name is required</div>
   </div>
-  <div class="form-group" style="height: 70px; width: 300px; margin: 10px">
+  <div class="form-group">
     <label for="second-name">Second name:</label>
     <input id="second-name" name="secondname" class="form-control" type="text" [(ngModel)]="user.secondName" #secondname="ngModel" required>
+    <div [hidden]="secondname.valid || secondname.untouched" class="alert alert-danger">Second name is required</div>
   </div>
-  <div class="form-group" style="height: 70px; width: 300px; margin: 10px">
+  <div class="form-group">
     <label for="login">Login:</label>
     <input id="login" name="login" class="form-control" type="text" [(ngModel)]="user.login"
-           #login="ngModel" required pattern="^[a-zA-Z0-9]">
+           #login="ngModel" required pattern="[a-zA-Z0-9]*">
+    <div [hidden]="login.valid || login.untouched" class="alert alert-danger">Login must contains only numbers and letters</div>
   </div>
-  <div class="form-group" style="height: 70px; width: 300px; margin: 10px">
+  <div class="form-group">
     <label for="email">E-mail:</label>
-    <input id="email" class="form-control" type="text" [(ngModel)]="user.email">
+    <input id="email" name="email" class="form-control" type="text" [(ngModel)]="user.email"
+           #email="ngModel" required email>
+    <div [hidden]="email.valid || email.untouched" class="alert alert-danger">It must be email</div>
   </div>
-  <div class="form-group" style="height: 70px; width: 300px; margin: 10px">
+  <div class="form-group">
     <label for="phone">Phone:</label>
-    <input id="phone" class="form-control" type="text" [(ngModel)]="user.phoneNumber">
+    <input id="phone" name="phonenumber" class="form-control" type="text" [(ngModel)]="user.phoneNumber"
+           #phonenumber="ngModel" required pattern="^[0-9]{10}$">
+    <div [hidden]="phonenumber.valid || phonenumber.untouched" class="alert alert-danger">Phone must contains 10 numbers</div>
   </div>
-  <div class="form-group" style="height: 70px; width: 300px; margin: 10px">
+  <div class="form-group">
     <label for="birthDate">Birth date:</label>
-    <input id="birthDate" class="form-control" type="date" [(ngModel)]="user.birthDate">
+    <input id="birthDate" name="birthdate" class="form-control" type="date" [(ngModel)]="user.birthDate"
+           #birthdate="ngModel" required><!--max="{{maxDate}}" min="1900-01-01"-->
+    <div [hidden]="birthdate.valid || birthdate.untouched" class="alert alert-danger">You must be 16 years old</div>
   </div>
-  <div class="form-group" style="height: 70px; width: 300px; margin: 10px">
+  <div class="form-group">
     <label for="password">Password:</label>
-    <input id="password" class="form-control" type="password" [(ngModel)]="user.password">
+    <input id="password" name="password" class="form-control" type="password" [(ngModel)]="user.password"
+           #password="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$">
+    <div [hidden]="password.valid || password.untouched" class="alert alert-danger">Password must be at least 6 characters; must contain latin letters (at least one uppercase and one lowercase), at least one number and at least one special character </div>
   </div>
-  <div class="form-group" style="height: 70px; width: 300px; margin: 10px">
+  <div class="form-group">
     <label for="repeatPassword">Repeat password:</label>
-    <input id="repeatPassword" class="form-control" type="password" [(ngModel)]="user.repeatPassword">
+    <input id="repeatPassword" name="repeatpassword" class="form-control" type="password" [(ngModel)]="repeatPassword"
+           #repeatpassword="ngModel" required pattern="{{user.password}}">
+    <div [hidden]="repeatpassword.valid || repeatpassword.untouched" class="alert alert-danger">Passwords don`t match</div>
   </div>
-  <div style="text-align: center; width: 300px; margin: 10px">
-    <button class="btn btn-outline-primary" (click)="signUp()">Sign up</button>
+  <div class="signup-button">
+    <button [disabled]="firstname.invalid || secondname.invalid || login.invalid || email.invalid || phonenumber.invalid || birthdate.invalid || password.invalid || repeatpassword.invalid"
+            class="btn btn-outline-primary" (click)="signUp()">Sign up</button>
   </div>
 </form>
 
-<div *ngIf="!isActiveForm">
+<form [formGroup]="reactiveUser" novalidate *ngIf="isActiveReactiveForm">
+  <div class="form-group">
+    <label for="first-name-r">First name</label>
+    <input id="first-name-r" class="form-control" name="firstname-r" formControlName="firstName" />
+    <div class="alert alert-danger" *ngIf="reactiveUser.controls['firstName'].invalid && reactiveUser.controls['firstName'].touched">First name is required</div>
+  </div>
+  <div class="form-group">
+    <label for="second-name-r">Second name</label>
+    <input id="second-name-r" class="form-control" name="secondname-r" formControlName="secondName" />
+    <div class="alert alert-danger" *ngIf="reactiveUser.controls['secondName'].invalid && reactiveUser.controls['secondName'].touched">Second name is required</div>
+  </div>
+  <div class="form-group">
+    <label for="login-r">Login</label>
+    <input id="login-r" class="form-control" name="login-r" formControlName="login" />
+    <div class="alert alert-danger" *ngIf="reactiveUser.controls['login'].invalid && reactiveUser.controls['login'].touched">Login must contains only numbers and letters</div>
+  </div>
+  <div class="form-group">
+    <label for="email-r">Email</label>
+    <input id="email-r" class="form-control" name="email-r" formControlName="email" />
+    <div class="alert alert-danger" *ngIf="reactiveUser.controls['email'].invalid && reactiveUser.controls['email'].touched">It must be email</div>
+  </div>
+  <div class="form-group">
+    <label for="phone-r">Phone</label>
+    <input id="phone-r" class="form-control" name="phonenumber-r" formControlName="phoneNumber" />
+    <div class="alert alert-danger" *ngIf="reactiveUser.controls['phoneNumber'].invalid && reactiveUser.controls['phoneNumber'].touched">Phone must contains 10 numbers</div>
+  </div>
+  <div class="form-group">
+    <label for="birth-date-r">Birth date:</label>
+    <input id="birth-date-r" class="form-control" name="birthdate-r" type="date" formControlName="birthDate" />
+    <div class="alert alert-danger" *ngIf="reactiveUser.controls['birthDate'].invalid && reactiveUser.controls['birthDate'].touched">You must be 16 years old</div>
+  </div>
+  <div class="form-group">
+    <label for="password-r">Password:</label>
+    <input id="password-r" class="form-control" name="password-r" type="password" formControlName="password" [(ngModel)]="password"/>
+    <div class="alert alert-danger" *ngIf="reactiveUser.controls['password'].invalid && reactiveUser.controls['password'].touched">Password must be at least 6 characters; must contain latin letters (at least one uppercase and one lowercase), at least one number and at least one special character </div>
+  </div>
+  <div class="form-group">
+    <label for="repeat-password-r">Repeat password:</label>
+    <input id="repeat-password-r" name="repeatpasswordr" class="form-control" type="password" formControlName="repeatPassword">
+    <div class="alert alert-danger" *ngIf="reactiveUser.controls['repeatPassword'].invalid && reactiveUser.controls['repeatPassword'].touched">Passwords don`t match</div>
+  </div>
+  <div class="signup-button">
+    <button class="btn btn-outline-primary" [disabled]="reactiveUser.invalid" (click)="signUp()">Sign up</button>
+  </div>
+</form>
+
+<div *ngIf="isSuccessfulRegistration">
+  <h1>User has been added successfully!</h1>
+</div>
+
+<div *ngIf="!isActiveForm && !isSuccessfulRegistration && !isActiveReactiveForm">
   <div>
-    <div style="margin: 10px; text-align: center">
+    <div class="main-button">
       <button class="btn btn-outline-primary" (click)="openReactiveForm()">Registration by reactive form</button>
     </div>
-    <div style="margin: 10px; text-align: center">
+    <div class="main-button">
       <button class="btn btn-outline-primary" (click)="openForm()">Registration by another way</button>
     </div>
   </div>
