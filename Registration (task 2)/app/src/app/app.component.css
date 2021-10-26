@@ -1,0 +1,22 @@
+.form-group {
+  width: 400px;
+  margin: 10px;
+}
+
+input.ng-touched.ng-invalid {
+  border:solid red 2px;
+}
+input.ng-touched.ng-valid {
+  border:solid green 2px;
+}
+
+div.signup-button {
+  text-align: center;
+  width: 400px;
+  margin: 10px;
+}
+
+div.main-button {
+  margin: 10px;
+  text-align: center;
+}
