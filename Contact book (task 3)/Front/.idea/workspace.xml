@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1a675d31-59f5-4f68-a11f-450bd861053d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/.idea/.idea.ContactsBook/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/.idea/.idea.ContactsBook/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/.idea/.idea.ContactsBook/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/.idea/.idea.ContactsBook/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/ContactsBook.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/Controllers/ContactController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/Data/ContactsBookDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/DbProviders/Abstract/IContactsProviderAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/DbProviders/ContactsProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/Entities/Contact.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/Entities/Phone.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/EntityServices/Abstract/IContactService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/EntityServices/Abstract/IPhoneService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/EntityServices/ContactService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/EntityServices/PhoneService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/Exceptions/ContactIsExisted.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/Exceptions/ContactNotFoundException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/Exceptions/ExistsContactWithThisPhoneException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/Properties/launchSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/Startup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/ContactsBook.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/ContactsBook.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/ContactsBook.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/Debug/net5.0/ContactsBook.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/Debug/net5.0/ContactsBook.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/Debug/net5.0/ContactsBook.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/Debug/net5.0/ContactsBook.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/Debug/net5.0/ContactsBook.csproj.AssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/ContactsBook/ContactsBook/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/Configs/ConfigurationService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/Configs/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/Data/ContactsBookDbContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/EF.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/Entities/Contact.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/Entities/Enums/Operator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/Entities/Human.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/Entities/Phone.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/Debug/net5.0/EF.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/Debug/net5.0/EF.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/Debug/net5.0/EF.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/Debug/net5.0/EF.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/Debug/net5.0/EF.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/EF.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/EF.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/EF.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/EF/EF/obj/rider.project.restore.info" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="20JClYPWD9TSeZuk0Z0VpZI0Nww" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a675d31-59f5-4f68-a11f-450bd861053d" name="Changes" comment="" />
+      <created>1635753457118</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635753457118</updated>
+      <workItem from="1635753458365" duration="70000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
