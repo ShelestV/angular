@@ -1,11 +1,9 @@
 using System;
 using System.Threading.Tasks;
-using ContactsBook.Data;
-using ContactsBook.DbProviders;
-using ContactsBook.DbProviders.Abstract;
-using ContactsBook.Entities;
-using ContactsBook.EntityServices;
-using ContactsBook.Exceptions;
+using ContactsBook.Models;
+using ContactsBook.Repositories;
+using ContactsBook.Repositories.Abstract;
+using Logic.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -16,12 +14,12 @@ namespace ContactsBook.Controllers
     public class PhoneController : Controller
     {
         private readonly ILogger<PhoneController> logger;
-        private readonly IPhonesProviderAsync phonesProvider;
+        private readonly IPhoneRepository phonesRepository;
         private const string argumentNullExceptionMessage = "Contact is empty";
 
-        public PhoneController(ContactsBookDbContext dbContext, ILogger<PhoneController> logger)
+        public PhoneController(ILogger<PhoneController> logger)
         {
-            phonesProvider = new PhoneProvider(dbContext);
+            phonesRepository = new PhoneRepository();
             this.logger = logger;
         }
 
@@ -34,19 +32,14 @@ namespace ContactsBook.Controllers
             try
             {
                 logger.LogDebug("Add phone started");
-                await phonesProvider.AddAsync(phone);
+                await phonesRepository.AddAsync(phone);
             }
             catch (ArgumentNullException)
             {
                 result = argumentNullExceptionMessage;
                 logger.LogError(argumentNullExceptionMessage);
             }
-            catch (ExistsContactWithThisPhoneException e)
-            {
-                result = e.Message;
-                logger.LogError(e.Message);
-            }
-            catch (ContactNotFoundException e)
+            catch (PhoneIsExistedException e)
             {
                 result = e.Message;
                 logger.LogError(e.Message);
@@ -63,7 +56,7 @@ namespace ContactsBook.Controllers
             try
             {
                 logger.LogDebug("Delete phone started");
-                await phonesProvider.DeleteByNumberAsync(phoneNumber);
+                await phonesRepository.DeleteByNumberAsync(phoneNumber);
             }
             catch (PhoneNotFoundException e)
             {

@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsBook", "ContactsBook\ContactsBook.csproj", "{34A30EA1-0618-422C-9A52-18DE1A891555}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF", "EF\EF.csproj", "{BA6CE8ED-E6BC-449F-97DD-0C239F0DB9EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{67AD527A-D4FB-41EF-BF74-42F46A1BE4CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{34A30EA1-0618-422C-9A52-18DE1A891555}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34A30EA1-0618-422C-9A52-18DE1A891555}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34A30EA1-0618-422C-9A52-18DE1A891555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA6CE8ED-E6BC-449F-97DD-0C239F0DB9EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6CE8ED-E6BC-449F-97DD-0C239F0DB9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6CE8ED-E6BC-449F-97DD-0C239F0DB9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6CE8ED-E6BC-449F-97DD-0C239F0DB9EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67AD527A-D4FB-41EF-BF74-42F46A1BE4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AD527A-D4FB-41EF-BF74-42F46A1BE4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67AD527A-D4FB-41EF-BF74-42F46A1BE4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67AD527A-D4FB-41EF-BF74-42F46A1BE4CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
