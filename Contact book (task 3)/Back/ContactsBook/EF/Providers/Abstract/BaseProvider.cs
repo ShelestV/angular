@@ -4,11 +4,9 @@ namespace EF.Providers.Abstract
 {
     public abstract class BaseProvider
     {
-        protected readonly ContactsBookDbContext dbContext;
-
-        protected BaseProvider()
+        protected ContactsBookDbContext GetNewContext()
         {
-            dbContext = new ContactsBookDbContext();
+            return new ContactsBookDbContext();
         }
     }
 }

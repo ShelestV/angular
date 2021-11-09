@@ -12,7 +12,7 @@ namespace Logic.Services
 {
     public class PhoneService : IPhoneService
     {
-        private IPhonesProviderAsync dbProvider;
+        private readonly IPhonesProviderAsync dbProvider;
         
         public PhoneService()
         {
@@ -39,8 +39,14 @@ namespace Logic.Services
         {
             if (phoneNumber is null) throw new ArgumentNullException();
             
-            if ((await dbProvider.GetAllAsync()).Any(p => phoneNumber.Equals(p.Number)))
+            if (!(await dbProvider.GetAllAsync()).Select(p => p.Number).Contains(phoneNumber))
                 throw new PhoneNotFoundException();
+
+            IContactsProviderAsync contactsDbProvider = new ContactProvider();
+            var contact = await contactsDbProvider.GetByPhoneNumberAsync(phoneNumber);
+            if (contact is not null && contact.Phones.Count <= 1)
+                await contactsDbProvider.DeleteByIdAsync(contact.Id);
+            
             await dbProvider.DeleteByNumberAsync(phoneNumber);
         }
     }

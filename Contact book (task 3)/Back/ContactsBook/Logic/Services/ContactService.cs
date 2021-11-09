@@ -13,7 +13,7 @@ namespace Logic.Services
 {
     public class ContactService : IContactService
     {
-        private IContactsProviderAsync dbProvider;
+        private readonly IContactsProviderAsync dbProvider;
 
         public ContactService()
         {
@@ -53,14 +53,14 @@ namespace Logic.Services
         {
             if (contactDTO is null) throw new ArgumentNullException();
             
-            if ((await dbProvider.GetAllAsync()).Any(c => c.Id == contactDTO.Id)) 
+            if (!(await dbProvider.GetAllAsync()).Select(c => c.Id).Contains(contactDTO.Id)) 
                 throw new ContactNotFoundException();
             await dbProvider.UpdateAsync(ContactDTOService.GetContactFromDTO(contactDTO));
         }
 
         public async Task DeleteByIdAsync(Guid id)
         {
-            if ((await dbProvider.GetAllAsync()).Any(c => c.Id == id)) 
+            if (!(await dbProvider.GetAllAsync()).Select(c => c.Id).Contains(id)) 
                 throw new ContactNotFoundException();
             await dbProvider.DeleteByIdAsync(id);
         }
