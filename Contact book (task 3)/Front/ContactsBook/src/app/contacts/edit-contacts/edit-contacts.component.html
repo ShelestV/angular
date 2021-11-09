@@ -1,0 +1,28 @@
+<form [formGroup]="editableContact">
+  <div class="form-group">
+    <label for="edit-name">Name</label>
+    <input id="edit-name" class="form-control" name="name" formControlName="name"/>
+    <div class="alert alert-danger" *ngIf="editableContact.controls['name'].invalid && editableContact.controls['name'].touched">
+      Name (less then 20 symbols) is required
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="edit-surname">Surname</label>
+    <input id="edit-surname" class="form-control" name="surname" formControlName="surname"/>
+    <div class="alert alert-danger"
+         *ngIf="editableContact.controls['surname'].invalid && editableContact.controls['surname'].touched">Surname must be less
+      then 20 symbols
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="edit-patronymic">Patronymic</label>
+    <input id="edit-patronymic" class="form-control" name="patronymic" formControlName="patronymic"/>
+    <div class="alert alert-danger"
+         *ngIf="editableContact.controls['patronymic'].invalid && editableContact.controls['patronymic'].touched">Patronymic must
+      be less then 30 symbols
+    </div>
+  </div>
+
+  <button class="btn btn-outline-danger" [disabled]="editableContact.invalid" (click)="editContact()">Edit</button>
+  <button class="btn btn-outline-danger" style="margin-left: 20px;" routerLink="../Show">Cancel</button>
+</form>

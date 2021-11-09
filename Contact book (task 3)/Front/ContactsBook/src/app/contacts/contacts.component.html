@@ -1,144 +1,20 @@
-<form [formGroup]="newContact" *ngIf="isActiveAddContact">
-  <div class="form-group">
-    <label for="add-name">Name</label>
-    <input id="add-name" class="form-control" name="name" formControlName="name"/>
-    <div class="alert alert-danger" *ngIf="newContact.controls['name'].invalid && newContact.controls['name'].touched">
-      Name (less then 20 symbols) is required
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="add-surname">Surname</label>
-    <input id="add-surname" class="form-control" name="surname" formControlName="surname"/>
-    <div class="alert alert-danger"
-         *ngIf="newContact.controls['surname'].invalid && newContact.controls['surname'].touched">Surname must be less
-      then 20 symbols
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="add-patronymic">Patronymic</label>
-    <input id="add-patronymic" class="form-control" name="patronymic" formControlName="patronymic"/>
-    <div class="alert alert-danger"
-         *ngIf="newContact.controls['patronymic'].invalid && newContact.controls['patronymic'].touched">Patronymic must
-      be less then 30 symbols
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="add-phone-number">Phone</label>
-    <input id="add-phone-number" class="form-control" name="phoneNumber" formControlName="phoneNumber"/>
-    <div class="alert alert-danger"
-         *ngIf="newContact.controls['phoneNumber'].invalid && newContact.controls['phoneNumber'].touched">Phone number
-      is required. Must contains 10 numbers
-    </div>
-  </div>
-
-  <button class="btn btn-outline-danger" [disabled]="newContact.invalid" (click)="addContact()">Create</button>
-  <button class="btn btn-outline-danger" (click)="cancelAddingContact()" style="margin-left: 20px;">Cancel</button>
-</form>
-
-<form [formGroup]="editableContact" *ngIf="isActiveEditContact">
-  <div class="form-group">
-    <label for="edit-name">Name</label>
-    <input id="edit-name" class="form-control" name="name" formControlName="name"/>
-    <div class="alert alert-danger" *ngIf="editableContact.controls['name'].invalid && editableContact.controls['name'].touched">
-      Name (less then 20 symbols) is required
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="edit-surname">Surname</label>
-    <input id="edit-surname" class="form-control" name="surname" formControlName="surname"/>
-    <div class="alert alert-danger"
-         *ngIf="newContact.controls['surname'].invalid && newContact.controls['surname'].touched">Surname must be less
-      then 20 symbols
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="edit-patronymic">Patronymic</label>
-    <input id="edit-patronymic" class="form-control" name="patronymic" formControlName="patronymic"/>
-    <div class="alert alert-danger"
-         *ngIf="newContact.controls['patronymic'].invalid && newContact.controls['patronymic'].touched">Patronymic must
-      be less then 30 symbols
-    </div>
-  </div>
-
-  <button class="btn btn-outline-danger" [disabled]="editableContact.invalid" (click)="editContact()">Edit</button>
-  <button class="btn btn-outline-danger" (click)="cancelEditingContact()" style="margin-left: 20px;">Cancel</button>
-</form>
-
-
-<div *ngIf="!isActiveAddContact && !isActiveEditContact">
-  <button class="btn btn-outline-danger" style="margin-bottom: 10px;" (click)="openAddingForm()">
-    Add contact
-  </button>
-</div>
-
-<table class="table table-hover" style="margin: 0;" *ngIf="!isActiveAddContact && !isActiveEditContact">
-  <thead class="thead-dark">
-  <tr>
-    <th>
-      Full name
-    </th>
-    <th>
-      Phones
-    </th>
-    <th class="manipulation-th">
-      Options
-    </th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let contact of contacts">
-    <td>
-      {{getFullName(contact)}}
-    </td>
-    <td>
-      <div>
-        <button type="button" class="btn btn-outline-danger" (click)="openAddingPhoneNumberForm(contact)"
-                *ngIf="!isOpenAddingPhoneNumberForm(contact)">
-          Add phone
+<div>
+  <nav class="navbar navbar-expand-sm">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button routerLink="Contacts/Show"
+                class="m-1 btn btn-light btn-outline-danger">Show
         </button>
-        <div *ngIf="isOpenAddingPhoneNumberForm(contact)" style="display: flex;">
-          <input id="new-phone-number" name="newPhoneNumber" class="form-control" type="text"
-                 [(ngModel)]="newPhoneNumber">
-          <button class="btn btn-outline-danger" (click)="addPhoneNumber(contact)">Add</button>
-        </div>
-        <table class="table" style="margin: 0; padding: 0">
-          <tr *ngFor="let phone of contact.phones">
-            <td>{{phone.number}}</td>
-            <td style="text-align: right; margin: 0;">
-              <button type="button" class="btn btn-outline-danger" (click)="deletePhone(phone)">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash"
-                     viewBox="0 0 16 16">
-                  <path
-                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                  <path fill-rule="evenodd"
-                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                </svg>
-              </button>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </td>
-    <td class="manipulation-td">
-      <button type="button" class="btn btn-outline-danger" (click)="openEditContactForm(contact)" style="margin: 5px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square"
-             viewBox="0 0 16 16">
-          <path
-            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-          <path fill-rule="evenodd"
-                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-        </svg>
-      </button>
-      <button type="button" class="btn btn-outline-danger" (click)="deleteContact(contact)" style="margin: 5px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash"
-             viewBox="0 0 16 16">
-          <path
-            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-          <path fill-rule="evenodd"
-                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-        </svg>
-      </button>
-    </td>
-  </tr>
-  </tbody>
-</table>
+      </li>
+
+      <li class="nav-item">
+        <button routerLink="Contacts/Add"
+                class="m-1 btn btn-light btn-outline-danger">Add
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+</div>

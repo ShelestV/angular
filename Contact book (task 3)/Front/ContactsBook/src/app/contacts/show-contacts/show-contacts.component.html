@@ -1,0 +1,54 @@
+<table class="table table-hover" style="margin: 0;">
+  <thead class="thead-dark">
+  <tr>
+    <th>
+      Full name
+    </th>
+    <th>
+      Phones
+    </th>
+    <th class="manipulation-th">
+      Options
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let contact of contacts">
+    <td>
+      {{getFullName(contact)}}
+    </td>
+    <td>
+      <div>
+        <button type="button" class="btn btn-outline-danger" (click)="openAddingPhoneNumberForm(contact)"
+                *ngIf="!isOpenAddingPhoneNumberForm(contact)">
+          Add phone
+        </button>
+        <div *ngIf="isOpenAddingPhoneNumberForm(contact)" style="display: flex;">
+          <input id="new-phone-number" name="newPhoneNumber" class="form-control" type="text"
+                 [(ngModel)]="newPhoneNumber">
+          <button class="btn btn-outline-danger" (click)="addPhoneNumber(contact)">Add</button>
+        </div>
+        <table class="table" style="margin: 0; padding: 0">
+          <tr *ngFor="let phone of contact.phones">
+            <td>{{phone.number}}</td>
+            <td style="text-align: right; margin: 0;">
+              <button type="button" class="btn btn-outline-danger" (click)="deletePhone(phone)">
+                <img src="assets/delete-icon.png" alt="delete" height="16" width="16" />
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class="manipulation-td">
+      <button type="button" class="btn btn-outline-danger" style="margin: 5px;" routerLink="../Edit" [queryParams]="contact">
+        <img src="assets/edit-icon.jpg" alt="edit" height="16" width="16" />
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="deleteContact(contact)" style="margin: 5px;">
+        <img src="assets/delete-icon.png" alt="delete" height="16" width="16" />
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

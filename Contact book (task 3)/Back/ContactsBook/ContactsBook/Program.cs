@@ -7,6 +7,7 @@ namespace ContactsBook
     {
         public static void Main(string[] args)
         {
+            Logic.Configurations.Config.Configure(args);
             CreateHostBuilder(args).Build().Run();
         }
 

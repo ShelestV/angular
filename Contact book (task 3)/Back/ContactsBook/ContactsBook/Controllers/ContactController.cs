@@ -1,11 +1,9 @@
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using ContactsBook.Data;
-using ContactsBook.DbProviders;
-using ContactsBook.DbProviders.Abstract;
-using ContactsBook.Entities;
-using ContactsBook.Exceptions;
+using ContactsBook.Models;
+using ContactsBook.Repositories;
+using ContactsBook.Repositories.Abstract;
+using Logic.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -16,12 +14,12 @@ namespace ContactsBook.Controllers
     public class ContactController : ControllerBase
     {
         private readonly ILogger<ContactController> logger;
-        private readonly IContactsProviderAsync contactsProvider;
+        private readonly IContactRepository contactsRepository;
         private const string argumentNullExceptionMessage = "Contact is empty";
 
-        public ContactController(ContactsBookDbContext dbContext, ILogger<ContactController> logger)
+        public ContactController(ILogger<ContactController> logger)
         {
-            contactsProvider = new ContactsProvider(dbContext);
+            contactsRepository = new ContactRepository();
             this.logger = logger;
         }
 
@@ -29,22 +27,8 @@ namespace ContactsBook.Controllers
         public async Task<JsonResult> Get()
         {
             logger.LogDebug("Get all contacts started");
-            var contacts = await contactsProvider.GetAllAsync();
-            var resultContacts = new List<Contact>();
-
-            foreach (var contact in contacts)
-            {
-                resultContacts.Add((Contact)contact.Clone());
-            }
-            
-            return new JsonResult(resultContacts);
-        }
-
-        [HttpGet("{phoneNumber}")]
-        public async Task<JsonResult> Get(string phoneNumber)
-        {
-            logger.LogDebug("Get contact by phone number started");
-            return new JsonResult(await contactsProvider.GetByPhoneNumberAsync(phoneNumber));
+            var contacts = await contactsRepository.GetAllAsync();
+            return new JsonResult(contacts);
         }
 
         [HttpPost]
@@ -55,9 +39,9 @@ namespace ContactsBook.Controllers
             try
             {
                 logger.LogDebug("Add contact started");
-                await contactsProvider.AddAsync(contact);
+                await contactsRepository.AddAsync(contact);
             }
-            catch (ExistsContactWithThisPhoneException e)
+            catch (ContactIsExistedException e)
             {
                 result = e.Message;
                 logger.LogError(e.Message);
@@ -80,7 +64,7 @@ namespace ContactsBook.Controllers
             try
             {
                 logger.LogDebug("Update contact started");
-                await contactsProvider.UpdateAsync(contact);
+                await contactsRepository.UpdateAsync(contact);
             }
             catch (ContactNotFoundException e)
             {
@@ -105,17 +89,12 @@ namespace ContactsBook.Controllers
             try
             {
                 logger.LogDebug("Delete contact started");
-                await contactsProvider.DeleteByIdAsync(contactId);
+                await contactsRepository.DeleteByIdAsync(contactId);
             }
             catch (ContactNotFoundException e)
             {
                 logger.LogError(e.Message);
                 result = e.Message;
-            }
-            catch (ArgumentNullException)
-            {
-                logger.LogError(argumentNullExceptionMessage);
-                result = argumentNullExceptionMessage;
             }
 
             logger.LogDebug("Delete contact ended");
