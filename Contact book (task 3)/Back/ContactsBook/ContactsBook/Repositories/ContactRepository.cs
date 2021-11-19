@@ -14,9 +14,9 @@ namespace ContactsBook.Repositories
     {
         private readonly IContactService service;
 
-        public ContactRepository()
+        public ContactRepository(IContactService service)
         {
-            service = new ContactService();
+            this.service = service;
         }
 
         public async Task<IEnumerable<Contact>> GetAllAsync()

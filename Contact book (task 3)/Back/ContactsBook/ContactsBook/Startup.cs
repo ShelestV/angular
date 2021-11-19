@@ -1,5 +1,7 @@
 using ContactsBook.Repositories;
 using ContactsBook.Repositories.Abstract;
+using Logic.Services;
+using Logic.Services.Abstract;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +27,9 @@ namespace ContactsBook
 
             services.AddSingleton<IContactRepository, ContactRepository>();
             services.AddSingleton<IPhoneRepository, PhoneRepository>();
+            
+            services.AddSingleton<IContactService, ContactService>();
+            services.AddSingleton<IPhoneService, PhoneService>();
             
             services.AddSwaggerGen(c =>
             {

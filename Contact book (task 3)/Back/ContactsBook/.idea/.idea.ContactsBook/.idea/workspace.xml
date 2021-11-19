@@ -7,9 +7,20 @@
     <projectFile profileName="ContactsBook">ContactsBook/ContactsBook.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f213ee64-2a9e-4de4-9e42-b8759bd036b0" name="Changes" comment="add dependency injection to ContactsBook &#10;write tests for ContactController.cs">
-      <change beforePath="$PROJECT_DIR$/ContactsBook/Controllers/PhoneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/Controllers/PhoneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/ControllersTests/PhonesControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/ControllersTests/PhonesControllerTests.cs" afterDir="false" />
+    <list default="true" id="f213ee64-2a9e-4de4-9e42-b8759bd036b0" name="Changes" comment="write PhoneController tests">
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/RepositoriesTests/ContactRepositoryTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/RepositoriesTests/PhoneRepositoryTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ContactsBook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ContactsBook/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/Repositories/ContactRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/Repositories/ContactRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/Repositories/PhoneRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/Repositories/PhoneRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ContactsBook.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ContactsBook.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ContactsBook.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ContactsBook.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ref/ContactsBook.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ref/ContactsBook.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ref/ContactsBook.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ref/ContactsBook.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/Debug/net5.0/ContactsBookTests.Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/Debug/net5.0/ContactsBookTests.Tests.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +55,7 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/879e64150fe442079fadd555ede677aa8f5788/1D5/TaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dce0357dbb054e5487dc2b7be73566331bf578/90/HttpProtocol.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vladimirsh/Documents/work/lessons/angular/Contact book (task 3)/Back/ContactsBook/ContactsBook/Controllers/PhoneController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/879e64150fe442079fadd555ede677aa8f5788/1B2/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/879e64150fe442079fadd555ede677aa8f5788/2C2/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f727163ee11949a8bf0479531b672d911bbb78/55/JsonResult.cs" root0="SKIP_HIGHLIGHTING" />
@@ -154,7 +166,7 @@
       <workItem from="1635751948564" duration="4210000" />
       <workItem from="1635838967064" duration="19956000" />
       <workItem from="1636023417805" duration="39858000" />
-      <workItem from="1637322907832" duration="7449000" />
+      <workItem from="1637322907832" duration="11621000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1635965051223</created>
@@ -177,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637330506599</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="write PhoneController tests">
+      <created>1637331096702</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637331096702</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +222,8 @@
     <MESSAGE value="finish" />
     <MESSAGE value="divide on 3 layers" />
     <MESSAGE value="add dependency injection to ContactsBook &#10;write tests for ContactController.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dependency injection to ContactsBook &#10;write tests for ContactController.cs" />
+    <MESSAGE value="write PhoneController tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="write PhoneController tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -12,9 +12,9 @@ namespace ContactsBook.Repositories
     {
         private readonly IPhoneService service;
 
-        public PhoneRepository()
+        public PhoneRepository(IPhoneService service)
         {
-            service = new PhoneService();
+            this.service = service;
         }
 
         public async Task AddAsync(Phone phone)
