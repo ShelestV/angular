@@ -6,7 +6,7 @@ using Logic.DTOs;
 
 namespace ContactsBook.Repositories.Abstract
 {
-    internal interface IContactRepository
+    public interface IContactRepository
     {
         Task<IEnumerable<Contact>> GetAllAsync();
         Task AddAsync(Contact contact);

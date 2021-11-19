@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sxjs47A91MBdLE8gr5meCnfXqjGoKNfF52C1cX7CTdumCkAkJJ+aDG0xPgp8qLuAefucQpI+FDVDYUsjqaP4xA==",
+  "dgSpecHash": "wZjF6mcoXI4DXZSvBip4BT1gj/H1msjWk1UrQrfMPjPTebV4SsFIvZpEEK/dvBHwEZ/OHNbXc9QLLIKxfxKq4A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj",
+  "projectFilePath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vladimirsh\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\vladimirsh\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

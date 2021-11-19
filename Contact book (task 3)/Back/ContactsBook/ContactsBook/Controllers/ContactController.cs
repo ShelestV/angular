@@ -1,11 +1,9 @@
 using System;
 using System.Threading.Tasks;
 using ContactsBook.Models;
-using ContactsBook.Repositories;
 using ContactsBook.Repositories.Abstract;
 using Logic.Exceptions;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace ContactsBook.Controllers
 {
@@ -13,20 +11,17 @@ namespace ContactsBook.Controllers
     [ApiController]
     public class ContactController : ControllerBase
     {
-        private readonly ILogger<ContactController> logger;
         private readonly IContactRepository contactsRepository;
         private const string argumentNullExceptionMessage = "Contact is empty";
 
-        public ContactController(ILogger<ContactController> logger)
+        public ContactController(IContactRepository repository)
         {
-            contactsRepository = new ContactRepository();
-            this.logger = logger;
+            contactsRepository = repository;
         }
 
         [HttpGet]
         public async Task<JsonResult> Get()
         {
-            logger.LogDebug("Get all contacts started");
             var contacts = await contactsRepository.GetAllAsync();
             return new JsonResult(contacts);
         }
@@ -38,21 +33,17 @@ namespace ContactsBook.Controllers
 
             try
             {
-                logger.LogDebug("Add contact started");
                 await contactsRepository.AddAsync(contact);
             }
             catch (ContactIsExistedException e)
             {
                 result = e.Message;
-                logger.LogError(e.Message);
             }
             catch (ArgumentNullException)
             {
                 result = argumentNullExceptionMessage;
-                logger.LogError(argumentNullExceptionMessage);
             }
 
-            logger.LogDebug("Add contact ended");
             return new JsonResult(result);
         }
 
@@ -63,21 +54,17 @@ namespace ContactsBook.Controllers
 
             try
             {
-                logger.LogDebug("Update contact started");
                 await contactsRepository.UpdateAsync(contact);
             }
             catch (ContactNotFoundException e)
             {
-                logger.LogError(e.Message);
                 result = e.Message;
             }
             catch (ArgumentNullException)
             {
-                logger.LogError(argumentNullExceptionMessage);
                 result = argumentNullExceptionMessage;
             }
 
-            logger.LogDebug("Update contact ended");
             return new JsonResult(result);
         }
 
@@ -88,16 +75,13 @@ namespace ContactsBook.Controllers
 
             try
             {
-                logger.LogDebug("Delete contact started");
                 await contactsRepository.DeleteByIdAsync(contactId);
             }
             catch (ContactNotFoundException e)
             {
-                logger.LogError(e.Message);
                 result = e.Message;
             }
 
-            logger.LogDebug("Delete contact ended");
             return new JsonResult(result);
         }
 

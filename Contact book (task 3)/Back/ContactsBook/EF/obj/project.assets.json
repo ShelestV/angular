@@ -6072,11 +6072,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj",
+      "projectUniqueName": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj",
       "projectName": "EF",
-      "projectPath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj",
+      "projectPath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj",
       "packagesPath": "C:\\Users\\vladimirsh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\obj\\",
+      "outputPath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vladimirsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6147,7 +6147,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

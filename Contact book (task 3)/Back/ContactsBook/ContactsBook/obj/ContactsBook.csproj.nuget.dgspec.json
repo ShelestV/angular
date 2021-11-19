@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\ContactsBook\\ContactsBook.csproj": {}
+    "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\ContactsBook\\ContactsBook.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\ContactsBook\\ContactsBook.csproj": {
+    "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\ContactsBook\\ContactsBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\ContactsBook\\ContactsBook.csproj",
+        "projectUniqueName": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\ContactsBook\\ContactsBook.csproj",
         "projectName": "ContactsBook",
-        "projectPath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\ContactsBook\\ContactsBook.csproj",
+        "projectPath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\ContactsBook\\ContactsBook.csproj",
         "packagesPath": "C:\\Users\\vladimirsh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\ContactsBook\\obj\\",
+        "outputPath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\ContactsBook\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vladimirsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\Logic.csproj": {
-                "projectPath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\Logic.csproj"
+              "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\Logic.csproj": {
+                "projectPath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\Logic.csproj"
               }
             }
           }
@@ -71,18 +71,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj": {
+    "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj",
+        "projectUniqueName": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj",
         "projectName": "EF",
-        "projectPath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj",
+        "projectPath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj",
         "packagesPath": "C:\\Users\\vladimirsh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\obj\\",
+        "outputPath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vladimirsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -153,18 +153,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\Logic.csproj": {
+    "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\Logic.csproj",
+        "projectUniqueName": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\Logic.csproj",
+        "projectPath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\Logic.csproj",
         "packagesPath": "C:\\Users\\vladimirsh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\obj\\",
+        "outputPath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vladimirsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -181,8 +181,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj": {
-                "projectPath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj"
+              "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj": {
+                "projectPath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\EF\\EF.csproj"
               }
             }
           }
@@ -211,7 +211,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

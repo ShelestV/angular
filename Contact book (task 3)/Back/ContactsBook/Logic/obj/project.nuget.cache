@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "shIkQh7dYxs5muzsGUGNvMzJqIAbTXDQNYLQ2KJ4k+TwTKJKYb6MtH+lZm8Mj7pgo7KedIMkF1+fcdl6VjmfCQ==",
+  "dgSpecHash": "qjlNIkTxbtT5pJiB+Ul1FvUZF1lXGp6pXk5tdycjO7GfbDH46muNwiTnhD/KrDpvxXkCuiHBxK3hTbRt+DjvtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\Logic.csproj",
+  "projectFilePath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\Logic\\Logic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vladimirsh\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\vladimirsh\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

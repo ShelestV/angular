@@ -1,3 +1,5 @@
+using ContactsBook.Repositories;
+using ContactsBook.Repositories.Abstract;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +22,10 @@ namespace ContactsBook
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddSingleton<IContactRepository, ContactRepository>();
+            services.AddSingleton<IPhoneRepository, PhoneRepository>();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "ContactsBook", Version = "v1"});

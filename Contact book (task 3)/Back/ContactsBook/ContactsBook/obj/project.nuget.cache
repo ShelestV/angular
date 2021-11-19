@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JTYmux9KM35HjA40WaEPT9CVg2S9CxeTVZefj/M/PEeVF7Igz2aKi7yJiTQjuNfMHFCXILR4JofG/7jEPDxMfw==",
+  "dgSpecHash": "d4IvHODbGRhyDF0KXqFGKZ4TPTV7BPBuCgir//1cN4JGOcIOPxGacWyn/fcxSK9JlEa9KkXlhxQPYyzd3AfE+A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vladimirsh\\Documents\\work\\angular\\Contact book (task 3)\\Back\\ContactsBook\\ContactsBook\\ContactsBook.csproj",
+  "projectFilePath": "C:\\Users\\vladimirsh\\Documents\\work\\lessons\\angular\\Contact book (task 3)\\Back\\ContactsBook\\ContactsBook\\ContactsBook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vladimirsh\\.nuget\\packages\\microsoft.aspnet.cors\\5.2.7\\microsoft.aspnet.cors.5.2.7.nupkg.sha512",
     "C:\\Users\\vladimirsh\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",

@@ -8,32 +8,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f213ee64-2a9e-4de4-9e42-b8759bd036b0" name="Changes" comment="divide on 3 layers">
-      <change afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/app-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/add-contacts/add-contacts.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/add-contacts/add-contacts.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/add-contacts/add-contacts.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/edit-contacts/edit-contacts.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/edit-contacts/edit-contacts.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/edit-contacts/edit-contacts.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/show-contacts/show-contacts.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/show-contacts/show-contacts.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/show-contacts/show-contacts.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/ContactsBookTests.Tests.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/ControllersTests/ContactsControllerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/ControllersTests/PhonesControllerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/ContactsBookTests.Tests.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/ContactsBookTests.Tests.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/ContactsBookTests.Tests.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/Debug/net5.0/ContactsBookTests.Tests.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/Debug/net5.0/ContactsBookTests.Tests.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/Debug/net5.0/ContactsBookTests.Tests.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/Debug/net5.0/ContactsBookTests.Tests.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/Debug/net5.0/ContactsBookTests.Tests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContactsBookTests/ContactsBookTests.Tests/obj/rider.project.restore.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Front/ContactsBook/test.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ContactsBook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ContactsBook/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/Controllers/ContactController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/Controllers/ContactController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/Controllers/PhoneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/Controllers/PhoneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/Repositories/Abstract/IContactRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/Repositories/Abstract/IContactRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/Repositories/Abstract/IPhoneRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/Repositories/Abstract/IPhoneRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ContactsBook.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ContactsBook.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ContactsBook.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ContactsBook.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ContactsBook.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ContactsBook.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ref/ContactsBook.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/bin/Debug/net5.0/ref/ContactsBook.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/ContactsBook.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/ContactsBook.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ContactsBook.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EF/Providers/Abstract/BaseProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EF/Providers/Abstract/BaseProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EF/Providers/Abstract/IContactsProviderAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EF/Providers/Abstract/IContactsProviderAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EF/Providers/ContactProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EF/Providers/ContactProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EF/Providers/PhoneProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EF/Providers/PhoneProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logic/Services/ContactService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/Services/ContactService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logic/Services/PhoneService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/Services/PhoneService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/contacts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/contacts.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/contacts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/ContactsBook/src/app/contacts/contacts.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ref/ContactsBook.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/Debug/net5.0/ref/ContactsBook.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactsBook/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ContactsBook/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EF/obj/Debug/net5.0/EF.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/EF/obj/Debug/net5.0/EF.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EF/obj/Debug/net5.0/EF.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EF/obj/Debug/net5.0/EF.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EF/obj/EF.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EF/obj/EF.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EF/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EF/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EF/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EF/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EF/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EF/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EF/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EF/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/obj/Debug/net5.0/Logic.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/obj/Debug/net5.0/Logic.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/obj/Debug/net5.0/Logic.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/obj/Debug/net5.0/Logic.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/obj/Logic.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/obj/Logic.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/ContactsBook/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/ContactsBook/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/ContactsBook/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/ContactsBook/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/ContactsBook/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/ContactsBook/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/ContactsBook/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/ContactsBook/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/ContactsBook/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/ContactsBook/tsconfig.spec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +85,11 @@
     </colors>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../../.." value="Tests" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -60,6 +104,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f727163ee11949a8bf0479531b672d911bbb78/10F/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/879e64150fe442079fadd555ede677aa8f5788/1D0/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dce0357dbb054e5487dc2b7be73566331bf578/70/KestrelEventSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/879e64150fe442079fadd555ede677aa8f5788/1D5/TaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dce0357dbb054e5487dc2b7be73566331bf578/90/HttpProtocol.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/879e64150fe442079fadd555ede677aa8f5788/1B2/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -69,6 +114,7 @@
     <setting file="file://$PROJECT_DIR$/EF/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/462eaaf113eb4fa2a2407bec433b831d66578/26/Select.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a9771b1b90284496853fbbe4cedf5e2a3e00/3/SwaggerMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/49954eb56c674e768be7a97e2a6794c343e00/1F/It.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a02903d0ee1c4fe78ecc6fa8e8e89fb955978/11/GenericWebHostBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0acf656cd59d4ed7a01d29aeddabb2a95b978/11/DeveloperExceptionPageMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -170,6 +216,7 @@
       <workItem from="1635751948564" duration="4210000" />
       <workItem from="1635838967064" duration="19956000" />
       <workItem from="1636023417805" duration="39858000" />
+      <workItem from="1637322907832" duration="6828000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1635965051223</created>
@@ -228,7 +275,18 @@
           </properties>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="DotNet Exception Breakpoints">
+          <properties exception="Xunit.Sdk.EqualException" isInternal="false" displayValue="EqualException" namespaceName="Xunit.Sdk">
+            <option name="internal" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="RiderUnitTests">
+        <watch expression="expected.Equals(actual)" language="C#" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
