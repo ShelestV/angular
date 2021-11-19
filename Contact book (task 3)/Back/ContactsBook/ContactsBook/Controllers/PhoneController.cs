@@ -12,7 +12,7 @@ namespace ContactsBook.Controllers
     public class PhoneController : Controller
     {
         private readonly IPhoneRepository phonesRepository;
-        private const string argumentNullExceptionMessage = "Contact is empty";
+        private const string argumentNullExceptionMessage = "Phone is empty";
 
         public PhoneController(IPhoneRepository repository)
         {
